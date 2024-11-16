@@ -8,7 +8,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
 
     <link rel="stylesheet" href="./styles/desktop.css">
 
@@ -18,21 +17,48 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
     <header>
-        <nav>
-            <div id="slogan-titleMain">
-                <img src="./images/" alt="Imagem do slgoan do projeto">
-                <div id="titles">
-                    <h1>AQUASUSTENTAVEL</h1>
-                    <h2>T E C N O L O G I A & S U S T E N T A B I L I D A D E</h2>
-                </div>
+        <div id="slogan-titleMain">
+            <img src="./images/sloganImg.png" alt="Imagem do slgoan do projeto">
+            <div id="titles">
+                <h1>AQUASUSTENTAVEL</h1>
+                <h2>T E C N O L O G I A & S U S T E N T A B I L I D A D E</h2>
             </div>
+        </div>
+        <nav id="menu">
+            <ul>
+                <li><a href="">Como funciona</a></li>
+                <li><a href="">Preços</a></li>
+                <li><a href="">Sobre nós</a></li>
+                <li><a href="">Contato</a></li>
+            </ul>
         </nav>
+        <div id="btns">
+            <button class="btn" id="login">
+                Login
+            </button>
+            <button class="btn" id="signUp">
+                Sign up
+            </button>
+        </div>
     </header>
     <main>
-    
+        <div id="section-home">
+            <div id="infoHome">
+                <h3>Pare de gastar água atoa</h3>
+                <h2>Economize de melhor forma</h2>
+                <p>Aumente a eficiência, economize e dinheiro com nossos dashboards.</p>
+                <button class="btn-home" id="btn-initial">Iniciar</button>
+                <button class="btn-home" id="btn-google"><i class="bi bi-google"></i>Entrar com o Google</button>
+            </div>
+            <div id="img-home">
+                <img src="./images/sloganImg.png" alt="">
+            </div>
+        </div>
     </main>
     <footer>
     
