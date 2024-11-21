@@ -1,0 +1,18 @@
+@use '../settings/settings' as config;
+@use '../utils/mixings' as mixing;
+
+.btn {
+    width: 100px;
+    height: 49px;   
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: config.$color7;
+    font-size: config.$fontSize18;
+    font-family: config.$fontMain;
+    border-radius: config.$borderRadius10;
+}
+
+#login {
+    @include mixing.buttons-style-un;
+}

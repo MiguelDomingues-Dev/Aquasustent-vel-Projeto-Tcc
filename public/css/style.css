@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-X: hidden;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #03131B;
+}
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 117px;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+
+h1, h2, h3 {
+  color: #fff;
+}
+
+@media (max-width: 576px) {
+  body {
+    width: 100vw;
+    height: auto;
+  }
+  body header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+}
+.btn {
+  width: 100px;
+  height: 49px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: #00B21B;
+  font-size: 18px;
+  font-family: "Lato", sans-serif;
+  border-radius: 10px;
+}
+
+#login {
+  background-color: #003127;
+  border: 2px solid rgba(0, 178, 27, 0.6901960784);
+}
+
+#slogan-titleMain {
+  display: flex;
+  width: 245.35px;
+  height: 100%;
+  cursor: pointer;
+}
+#slogan-titleMain img {
+  width: 82px;
+  height: 82px;
+  align-self: center;
+}
+#slogan-titleMain #titles {
+  align-self: center;
+  gap: 0px 10px;
+}
+#slogan-titleMain #titles h1 {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Istok Web", sans-serif;
+}
+#slogan-titleMain #titles h2 {
+  font-family: "Istok Web", sans-serif;
+  font-size: 6px;
+}
+
+#menu {
+  width: 489px;
+}
+#menu ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+}
+#menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  position: relative;
+}
+#menu li a::after {
+  content: " ";
+  width: 0%;
+  height: 2px;
+  background-color: #00B21B;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s ease-in-out;
+}
+#menu li a:hover::after {
+  width: 100%;
+}
+
+#btns {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  width: 210px;
+  height: 100%;
+}
+#btns #login {
+  background-color: #003127;
+  border: 2px solid rgba(0, 178, 27, 0.6901960784);
+}
+#btns #signUp {
+  box-shadow: 0px 6px 20px rgba(47, 255, 0, 0.2509803922);
+  background-color: #00B21B;
+  color: #fff;
+}
+
+#section-home {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 537px;
+}
+#section-home #infoHome {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: 261px;
+  gap: 10px 0px;
+}
+#section-home #infoHome h3 {
+  font-size: 48px;
+  font-weight: 300;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+}
+#section-home #infoHome h2 {
+  font-size: 48px;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+}
+#section-home #infoHome p {
+  width: 347px;
+  font-size: 18px;
+  font-weight: 300;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+}
+#section-home #infoHome #btnAccount {
+  display: flex;
+  justify-content: space-around;
+  width: 410.68px;
+  height: 52px;
+}
+#section-home #infoHome .btn-home {
+  width: 200px;
+  height: 52px;
+  cursor: pointer;
+  font-size: 17px;
+  border: none;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  border-radius: 10px;
+}
+#section-home #infoHome #btn-initial {
+  box-shadow: 0px 6px 20px rgba(47, 255, 0, 0.2509803922);
+  background-color: #00B21B;
+  color: #fff;
+}
+#section-home #infoHome #btn-google {
+  background-color: #003127;
+  border: 2px solid rgba(0, 178, 27, 0.6901960784);
+}
+#section-home #img-home {
+  width: 363px;
+  height: 351px;
+  overflow-y: hidden;
+}
+
+@media (max-width: 576px) {
+  #slogan-titleMain {
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    text-align: center;
+  }
+  #slogan-titleMain img {
+    width: 60px;
+    height: 60px;
+  }
+  #slogan-titleMain h1 {
+    font-size: 12px;
+  }
+  #slogan-titleMain h2 {
+    font-size: 8px;
+  }
+  #menu {
+    width: 100%;
+    margin-top: 10px;
+  }
+  #menu ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px 0px;
+  }
+  #btns {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 10px 0px;
+  }
+  #btns .btn {
+    width: 90%;
+    height: 45px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
