@@ -1,0 +1,22 @@
+@use '../settings/settings' as config;
+
+body {
+    font-family: config.$fontMain;
+    background-color: config.$color1;
+    color: config.$color8;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}

@@ -1,0 +1,201 @@
+@use '../settings/settings' as config;
+@use '../utils/mixings' as mixing;
+
+main {
+    .efect-scroll-text-top, .efect-scroll-img-top, .titulo, .paragrafo-explicativo, .free, .aqua-plus, .aqua-plus-ultra, .card1, .card2, .card3, .sobre-text, .icon-sobre, .icon-menssage, .form-menssage {
+      visibility: hidden;
+    }
+    .intro-section {
+      display: flex;
+      flex-direction: column;
+      -ms-flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 0;
+      
+      .text-content {
+        h3 {
+          font-weight: config.$fontPeso;
+        }
+  
+        h2 {
+          font-weight: 700;
+        }
+  
+        p {
+          
+          width: 347px;
+        }
+  
+        .btn {
+          margin-right: 1rem;
+          width: 200px;
+          font-size: config.$fontSize14;
+          &-login {
+            @include mixing.btn-primary;
+          }
+  
+          &-login-google {
+              @include mixing.btn-secundary;
+            }
+          }
+        }
+      }
+  
+  
+    .cards-section {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding: 2rem 0;
+      h2 {
+        font-size: 2.5rem;
+        font-weight: 600;
+      }
+      .card {
+        background: transparent;
+        border: none;
+  
+        i {
+          font-size: 5rem;
+          color: #00b21bb6;
+        }
+  
+        h3 {
+          margin-top: 1rem;
+          font-size: 1.2rem;
+        }
+  
+        p {
+          font-size: 1rem;
+          margin-top: 0.5rem;
+        }
+      }
+    }
+  
+    .important-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+  
+      h2 {
+        font-size: 2.5rem;
+        font-weight: 600;
+      }
+  
+      p {
+        font-size: config.$fontSize18;
+        margin-top: 1rem;
+        color: #ffffff42;
+      }
+
+      #inscrecao-account {
+        width: 200px;
+        padding: 15px;
+        border-radius: 10px;
+        font-size: config.$fontSize14;
+        @include mixing.btn-secundary;
+      }
+
+      .description-important {
+        width: 691px;
+      }
+    }
+
+    #plans-services {
+      h2 {
+        font-size: 2.5rem;
+        font-weight: 600;
+      }
+      p {
+        font-size: config.$fontSize18;
+        margin-top: 1rem;
+        color: #ffffff42; 
+        & strong {
+          color: #ffffffb1;
+        }
+      }
+    }
+
+    #sobre {
+      .container {
+        div {
+          div {
+            h2 {
+              font-family: config.$fontMain;
+              font-size: config.$fontSize48;
+            }
+            .border {
+              width: 60px;
+              height: 4px;
+              border: none;
+              border-radius: 10px;
+              margin-bottom: 20px;
+              background-color: config.$color7;
+            }
+            p {
+              font-family: config.$fontMain;
+              font-size: config.$fontSize18;
+            }
+          }
+        }
+      }
+    }
+
+    #form-parcerias {
+      h3 {
+        width: 37.5rem;
+        text-align: center;
+        font-size: 1.8125rem;
+        font-family: config.$fontMain;
+      }
+      svg {
+        width: 20.4375rem;
+        height: 20.4375rem;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100%;
+        div {
+          .input-single {
+            position: relative;
+            label {
+              position: absolute;
+              left: 0;
+              bottom: 5px;
+              font-family: config.$fontMain;
+              transition: 0.5s ease-in-out;
+            }
+            .input {
+              width: 100%;
+              border: none;
+              box-shadow: none;
+              padding: 10px;
+              color: config.$color8;
+              font-family: config.$fontMain;
+              background-color: transparent;
+              border-bottom:2px solid config.$color7;
+              &:focus ~ label,
+              &:valid ~ label{
+                transform: translateY(-24px);
+                font-size: 0.9375rem;
+              }
+            }
+          }  
+        }
+      }
+      textarea {
+        box-shadow: none;
+        color: config.$color8;
+        background-color: transparent;
+        border:2px solid config.$color7;
+      }
+      #submit-menssage {
+        width: 200px;
+        align-self: center;
+      }
+    }
+}

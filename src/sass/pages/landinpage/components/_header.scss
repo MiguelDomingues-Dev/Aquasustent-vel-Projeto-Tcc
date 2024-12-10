@@ -1,0 +1,63 @@
+@use '../settings/settings' as config;
+@use '../utils/mixings' as mixing;
+
+header {
+    color: config.$color8;
+    padding: 1rem 0;
+  
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      
+      #slogan-titleMain {
+        #titles {
+          align-self: center;
+          padding: 0;
+          font-family: config.$fontSecundary;
+          h1 {
+            margin: 0;
+            text-align: center;
+            font-size:  config.$fontSize14;
+          }
+          h2 {
+            margin: 0;
+            font-size: 6px;
+            font-weight: 300;
+            font-family: config.$fontSecundary;
+          }
+        }
+      }
+
+      .nav {
+        .nav-link {
+          font-size: config.$fontSize18; 
+          @include mixing.links;
+        }
+        .nav-link::after {
+          content: " ";
+          width: 0%;
+          height: 2px;
+          background-color: config.$color7;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          transition: 0.5s ease-in-out;          
+        }
+      
+        .nav-link:hover::after {
+            width: 100%;
+        }
+      }
+  
+      .btn-login {
+        @include mixing.btn-primary;
+      }
+  
+      .btn-cadastrar {
+        @include mixing.btn-secundary;
+      }
+    }
+  }
+  

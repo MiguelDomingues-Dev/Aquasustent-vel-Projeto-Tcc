@@ -1,0 +1,8 @@
+@use '../settings/settings' as config;
+@import '../settings/tipografia';
+
+footer {
+    overflow-x: hidden;
+    width: 98.8vw;
+    background-color: config.$color5;
+}

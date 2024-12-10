@@ -49,3 +49,17 @@
     background-color: config.$color7;
     color: config.$color8;
 }
+
+@mixin card-service {
+    background-color: config.$color5;
+    border: 2px solid config.$color7;
+    width: 300px;
+    height: 349px;
+}
+
+@mixin card-service-plus {
+    background-color: config.$color7;
+    box-shadow: 0px 6px 20px #00b21b95;
+    height: 435px;
+    width: 336px;
+}
