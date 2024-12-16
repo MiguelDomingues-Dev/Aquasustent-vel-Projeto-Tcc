@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #03131B;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+}
+.container #info {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.container #info h1 {
+  font-size: 2.125rem;
+  color: #fff;
+  font-weight: 400;
+}
+.container #info h2 {
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+.container #info p {
+  color: #fff;
+  font-weight: 400;
+  width: 21.9375rem;
+}
+.container #info img {
+  width: 31.3125rem;
+  height: 27;
+}
+.container #formCadastro {
+  width: 464px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-right: 20px;
+}
+.container #formCadastro h2 {
+  align-self: center;
+  color: #525252;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+.container #formCadastro .cadastrarWithGoogle {
+  align-self: center;
+  display: flex;
+  justify-content: space-around;
+  height: 2.5rem;
+  width: 13.75rem;
+  padding: 10px;
+  border-radius: 6px;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+.container #formCadastro .cadastrarWithGoogle img {
+  align-self: center;
+}
+.container #formCadastro .cadastrarWithGoogle p {
+  color: #A1A1A1;
+  font-size: 12px;
+  font-weight: 600;
+}
+.container #formCadastro p {
+  align-self: center;
+  color: #A1A1A1;
+  font-weight: 600;
+}
+.container #formCadastro form {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  gap: 15px 0px;
+  width: 29rem;
+}
+.container #formCadastro form .input-single {
+  position: relative;
+}
+.container #formCadastro form .input {
+  width: 100%;
+  border: none;
+  outline: 0;
+  padding: 10px;
+  border-bottom: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+}
+.container #formCadastro form .input:focus ~ label, .container #formCadastro form .input:valid ~ label {
+  transform: translateY(-24px);
+  font-size: 12px;
+}
+.container #formCadastro form label {
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  transition: 0.5s ease-in-out;
+  font-size: 0.875rem;
+  color: #A1A1A1;
+}
+.container #formCadastro form .input__icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #6F7E8C;
+}
+.container #formCadastro form .password-strength {
+  margin-top: 10px;
+}
+.container #formCadastro form .progress-bar {
+  transition: width 0.3s ease;
+}
+.container #formCadastro form .password-strength-items li {
+  font-size: 0.9rem;
+  list-style: none;
+  margin-bottom: 5px;
+}
+.container #formCadastro form .password-strength-items li img {
+  width: 20px;
+  height: 20px;
+}
+.container #formCadastro #btnCadastrar {
+  height: 40px;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #00B21B;
+}
+.container #formCadastro #accountExist {
+  align-self: flex-start;
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+.container #formCadastro #accountExist a {
+  text-decoration: none;
+  color: rgba(0, 178, 27, 0.7254901961);
+}
+
+/*# sourceMappingURL=cadastro.css.map */

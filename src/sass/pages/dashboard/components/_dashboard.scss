@@ -1,0 +1,21 @@
+@use './../settings/settings' as config;
+
+.dadContainer {
+    display: grid;
+    grid-template-rows: 4.0625rem 500px;
+    grid-template-areas: 
+    "sidebar navbar navbar navbar"
+    "sidebar datas datas datas"
+    ;
+    .sidebar {
+        grid-area: sidebar;
+        height: 100vh;
+    }
+    .navbar {
+        grid-area: navbar;
+    }
+    .datas {
+        width: 100%;
+        grid-area: datas;
+    }
+}

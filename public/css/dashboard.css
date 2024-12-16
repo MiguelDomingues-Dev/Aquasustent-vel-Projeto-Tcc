@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #03131B !important;
+}
+
+.dadContainer {
+  display: grid;
+  grid-template-rows: 4.0625rem 500px;
+  grid-template-areas: "sidebar navbar navbar navbar" "sidebar datas datas datas";
+}
+.dadContainer .sidebar {
+  grid-area: sidebar;
+  height: 100vh;
+}
+.dadContainer .navbar {
+  grid-area: navbar;
+}
+.dadContainer .datas {
+  width: 100%;
+  grid-area: datas;
+}
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+.navbar .navbar-brand {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+.navbar .navbar-brand:hover {
+  color: #ccc;
+}
+.navbar .nav-icon {
+  display: flex;
+  align-items: center;
+}
+.navbar .nav-icon .bi-bell {
+  background-color: rgba(0, 178, 27, 0.7333333333);
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 8px;
+  width: 52px;
+  height: 44px;
+  cursor: pointer;
+  text-align: center;
+}
+.navbar .nav-icon .nav-divider {
+  height: 30px;
+  border-left: 1px solid #495057;
+  margin: 0 15px;
+}
+.navbar .nav-icon .user-profile {
+  display: flex;
+  align-items: center;
+  color: #888;
+  font-size: 0.9rem;
+}
+.navbar .nav-icon .user-profile .user-circle {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin-left: 10px;
+}
+
+.datas {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.datas .calendar-container {
+  width: 351px;
+  height: 320px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #003127;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.datas .calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.datas .calendar-header button {
+  background-color: #00b21b;
+  border: none;
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: 500ms ease-out;
+}
+.datas .calendar-header button:hover {
+  transition: 500ms ease-in;
+  background-color: #04500f;
+}
+.datas .days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  text-align: center;
+}
+.datas .day {
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+}
+.datas .day:hover {
+  background-color: rgb(4, 80, 15);
+  color: #fff;
+  cursor: pointer;
+}
+.datas #daysContainer {
+  font-size: 0.75rem;
+}
+.datas #currentMonth {
+  font-size: 1.0625rem;
+  color: #fff;
+}
+.datas #chart1, .datas #chart2, .datas #chart3 {
+  width: 350px !important;
+  height: 165px !important;
+}
+
+.sidebar {
+  width: 115px;
+  background-color: #081623;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-top: 20px;
+  box-shadow: 0px 0 23.1px rgba(255, 255, 255, 0.042);
+}
+.sidebar .part {
+  width: 44px;
+  height: 2px;
+  background-color: #2D2F39;
+}
+.sidebar .logo {
+  margin-bottom: 30px;
+}
+.sidebar .logo img {
+  width: 60px;
+  height: 60px;
+}
+.sidebar .nav {
+  display: flex;
+  justify-content: space-evenly;
+  height: 192px;
+}
+.sidebar .nav-link {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1.2rem;
+  color: #03131B;
+  transition: background-color 0.3s ease;
+}
+.sidebar .nav-link .icon {
+  color: #fff;
+}
+.sidebar .nav-link.active {
+  width: 45px;
+  height: 45px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 8px;
+  background-color: rgba(0, 178, 27, 0.4039215686);
+}
+.sidebar .nav-link.active .icon {
+  font-size: 1.5rem;
+}
+.sidebar .icon-exit {
+  cursor: pointer;
+  color: #CC8889;
+}
+
+/*# sourceMappingURL=dashboard.css.map */

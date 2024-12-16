@@ -1,0 +1,50 @@
+.navbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    .navbar-brand {
+        color: #fff;
+        font-size: 1.5rem;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .navbar-brand:hover {
+        color: #ccc;
+    }
+    .nav-icon {
+        display: flex;
+        align-items: center;
+        .bi-bell {
+            background-color: #00b21bbb;
+            color: #fff;
+            font-size: 1.2rem;
+            padding: 10px;
+            border-radius: 8px;
+            width: 52px;
+            height: 44px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .nav-divider {
+            height: 30px;
+            border-left: 1px solid #495057;
+            margin: 0 15px;
+        }
+        .user-profile {
+            display: flex;
+            align-items: center;
+            color: #888;
+            font-size: 0.9rem;
+            .user-circle {
+                cursor: pointer;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: #ccc;
+                margin-left: 10px;
+            }
+        }
+    }
+}
