@@ -1,0 +1,71 @@
+@use './../settings/settings' as config;
+
+.card {
+    border: none;
+    border-radius: 10px;
+    color: config.$color8;
+    background-color: transparent !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.card-header {
+    background-color: #114663;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    span {
+        color: config.$color8;
+    }
+}
+
+.card-header .dropdown {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-toggle {
+    background-color: #0e4a6b;
+    color: #ffffff;
+    border: none;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.card-body {
+    padding: 15px;
+    background-color: #0b1a28;
+}
+
+.history-item {
+    background-color: #004a23;
+    color: #ffffff;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.history-item .date {
+    font-size: 0.8rem;
+    color: #66a678;
+}
+
+.history-item .value {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.three-dots {
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #66a678;
+}

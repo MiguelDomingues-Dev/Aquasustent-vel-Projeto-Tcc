@@ -139,7 +139,7 @@ body {
 }
 
 .sidebar {
-  width: 115px;
+  width: 80px;
   background-color: #081623;
   display: flex;
   flex-direction: column;
@@ -198,6 +198,105 @@ body {
 .sidebar .icon-exit {
   cursor: pointer;
   color: #CC8889;
+}
+
+#perfilMenu {
+  position: absolute;
+  z-index: 2;
+  top: 4rem;
+  right: 0.5rem;
+  color: #fff;
+}
+#perfilMenu .dropdow__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  animation: fadeOutAnimation ease-in-out 0.3s forwards;
+  width: 19rem;
+  right: 1rem;
+  padding: 1rem;
+  background-color: #081623;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(129, 129, 129, 0.2);
+}
+#perfilMenu .dropdown__wrapper--fade-in {
+  animation: fadeInAnimation ease-in-out 0.3s forwards;
+}
+#perfilMenu .none {
+  display: none;
+}
+#perfilMenu .hide {
+  opacity: 0;
+  visibility: hidden;
+  animation: fadeInAnimation ease-in-out 0.3s forwards;
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes fadeOutAnimation {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+#perfilMenu .profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+#perfilMenu .text-email {
+  color: #9e9a9a;
+}
+#perfilMenu .nav-link-custom {
+  color: #478F96;
+  padding: 10px 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+#perfilMenu .nav-link-custom i {
+  font-size: 1.2rem;
+  color: #9b9999;
+}
+#perfilMenu .nav-link-custom:hover,
+#perfilMenu .nav-link-active {
+  background-color: #478F96;
+  color: #f1f1f1;
+}
+#perfilMenu .upgrade-btn {
+  background-color: #e0ebff;
+  color: #00B21B;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+#perfilMenu .upgrade-btn:hover {
+  background-color: #4c6ef5;
+  color: #ffffff;
+}
+#perfilMenu .footer {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+#perfilMenu .exit {
+  color: #478F96;
+  padding: 10px 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+#perfilMenu .exit i {
+  font-size: 1.2rem;
+  color: #9b9999;
 }
 
 /*# sourceMappingURL=dashboard.css.map */

@@ -1,0 +1,77 @@
+@use './../settings/settings' as config;
+
+.weather-card {
+    width: 18.75rem;
+    height: 26.25rem;
+    border-radius: 15px;
+    background: config.$color3;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    .backgroundImg {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        border-radius: 15px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url(/public/images/Temperature\ Now.png);
+        h1 {
+            text-align: center;
+            color: config.$color8;
+            font-size: 3.5rem;
+            margin: 0;
+        }
+        h2 {
+            text-align: center;
+            color: config.$color8;
+            font-size: 1.3rem;
+            color: #aaa;
+            margin-top: -10px;
+        }
+        .location {
+            text-align: center;
+            color: config.$color8;
+            font-size: 1rem;
+            align-items: center;
+            margin-bottom: 10px;
+            i {
+                margin-right: 8px;
+            }
+        }
+        .forecast {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            color: config.$color8;
+            div {
+                text-align: center;
+            }
+            i {
+                font-size: 2rem;
+                margin-bottom: 5px;
+            }
+        }
+        .alert {
+            height: 5.8125rem;
+            display: flex;
+            align-items: center;
+            background-color: #00131936;
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+            color: config.$color8;
+            i {
+                color: #ffc107;
+                font-size: 2rem;
+                margin-right: 10px;
+            }
+            span {
+                font-size: 0.7rem;
+            }
+        }
+        .highlight {
+            font-size: 0.75rem;
+            color: #ffc107;
+            font-weight: bold;
+        }
+    }
+}

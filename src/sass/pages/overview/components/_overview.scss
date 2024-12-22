@@ -1,0 +1,89 @@
+.dadContainer {
+    display: grid;
+    gap: 1rem;
+    grid-template-areas:
+        "sidebar navbar navbar tanque"
+        "sidebar card card tanque"
+        "sidebar historico climaTempo tanque";
+    grid-template-columns: 5% 3fr 1fr;
+    grid-template-rows: auto auto 1fr;
+    width: 100%;
+    height: 100%;
+    padding: 0px !important;
+    .sidebar {
+        grid-area: sidebar;
+        min-width: 80px;
+    }
+
+    .navbar {
+        grid-area: navbar;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #card {
+        grid-area: card;
+    }
+
+    #historico {
+        grid-area: historico;
+        width: 100%;
+        max-width: 43.125rem;
+        height: 95%;
+    }
+
+    #climaTempo {
+        grid-area: climaTempo;
+        height: 95%;
+    }
+
+    #tanque {
+        grid-area: tanque;
+        height: auto;
+    }
+
+    #navBottom {
+        display: none !important;
+    }
+
+    @media (max-width: 576px) {
+        grid-template-areas:
+            "menuMobile"
+            "card"
+            "historico"
+            "climaTempo"
+            "tanque";
+        grid-template-columns: 1fr;
+        .sidebar,
+        .navbar {
+            display: none;
+        }
+
+        #card {
+            .cards-content {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        #climaTempo {
+            grid-area: climaTempo;
+            height: 95%;
+            .backgroundImg {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+
+        #menuMobile {
+            display: block;
+        }
+
+        #navBottom {
+            display: block;
+        }
+    }
+}

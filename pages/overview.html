@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <a style="display: none;" href="https://www.flaticon.com/br/icones-gratis/rfid" title="rfid ícones">Rfid ícones criados por Freepik - Flaticon</a>
+    <!-- <a style="display: none;" href="https://www.flaticon.com/br/icones-gratis/rfid" title="rfid ícones">Rfid ícones criados por Freepik - Flaticon</a> -->
 
-    <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./../favicon_io/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/android-chrome-512x512.png" />
     <link rel="manifest" href="../favicon_io/site.webmanifest" />
 
+    <!-- Css principal! -->
     <link rel="stylesheet" href="./../public/css/overview.css">
 
     <title>Overview</title>
@@ -45,50 +46,282 @@
             </nav>
             <span class="part"></span>
             <i class="icon-exit bi bi-box-arrow-right"></i>
-        </div>  
+        </div>
+        <!-- Menu Hamburguer -->
+        <div id="menuMobile">
+            <header class="d-flex justify-content-between align-items-center p-3">
+                <button class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+                    <i class="bi bi-list" style="font-size: 1.5rem;"></i>
+                </button>
+                <span class="fs-5 fw-bold">Overview</span>
+                <i class="bi bi-bell"></i>
+            </header>
+                <!-- Offcanvas Menu -->
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="d-flex align-items-center mb-4">
+                        <img src="https://via.placeholder.com/50" alt="User Profile" class="rounded-circle me-2" width="50" height="50">
+                        <div>
+                            <h6 class="mb-0">User Test</h6>
+                            <small>usertest@gmail.com</small>
+                        </div>
+                    </div>
+                    <nav>
+                        <a href="#" class="nav-link-custom mb-2 d-block">
+                            <i class="bi bi-person me-2"></i> Account
+                        </a>
+                        <a href="#" class="nav-link-custom mb-2 d-block">
+                            <i class="bi bi-gear me-2"></i> Settings
+                        </a>
+                        <a href="#" class="nav-link-custom mb-2 d-block">
+                            <i class="bi bi-question-circle me-2"></i> Help
+                        </a>
+                        <a href="#" class="nav-link-custom mb-2 d-block text-danger">
+                            <i class="bi bi-box-arrow-left me-2"></i> Sign Out
+                        </a>
+                    </nav>
+                </div>
+            </div>
+            <!-- Bottom Navigation Bar -->
+            <div class="bottom-nav d-flex justify-content-around align-items-center py-2">
+                <a href="#" class="active">
+                    <i class="bi bi-house"></i>
+                </a>
+                <a href="#">
+                    <i class="bi bi-bar-chart"></i>
+                </a>
+                <a href="#">
+                    <i class="bi bi-gear"></i>
+                </a>
+                <a href="#">
+                    <i class="bi bi-box-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+        <div id="perfilMenu">
+            <div class="dropdow__wrapper hide dropdown__wrapper--fade-in none">
+                <!-- Perfil -->
+                <div class="d-flex align-items-center mb-4">
+                    <img src="https://via.placeholder.com/50" alt="User Profile " class="profile-img me-2">
+                    <div>
+                        <h6 class="mb-0">
+                            User Test
+                        </h6>
+                        <small class="text-email">usertest@gmail.com</small>
+                    </div>
+                </div>
+                <!-- Menu Links -->
+                <nav>
+                    <a href="#" class="nav-link-custom nav-link-active">
+                        <i class="bi bi-person "></i> Account
+                    </a>
+                    <a href="#" class="nav-link-custom">
+                        <i class="bi bi-gear"></i> Settings
+                    </a>
+                    <a href="#" class="nav-link-custom">
+                        <i class="bi bi-book"></i> Guide
+                    </a>
+                    <a href="#" class="nav-link-custom">
+                        <i class="bi bi-question-circle"></i> Help
+                    </a>
+                </nav>
+                <!-- Plano Gratuito -->
+                <div class="footer my-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <p class="mb-0">Free Plan</p>
+                        </div>
+                        <a href="#" class="upgrade-btn">Upgrade</a>
+                    </div>
+                </div>
+                <!-- Sair -->
+                <a href="#" class="exit text-danger">
+                    <i class="bi bi-box-arrow-left"></i> Sign Out
+                </a>
+            </div>
+        </div>
         <nav class="navbar">
             <!-- Título -->
-            <a href="#" class="navbar-brand">Dashboard</a>
-            
+            <a href="#" class="navbar-brand">Overview</a>
+        
             <!-- Ícone de Notificação -->
             <div class="nav-icon">
                 <i class="bi bi-bell"></i>
                 <div class="nav-divider"></div>
                 <div class="user-profile">
                     @userTest
-                <div class="user-circle"></div>
+                <div id="btnUserPerfil" class="user-circle"></div>
                 </div>
             </div>
         </nav>
-        <div class="row gy-4">
-            <!-- Card 1: Total Gasto R$/L -->
-            <div class="col-md-4">
-                <div class="card-custom card-green">
-                    <h5>Total Gasto R$/L</h5>
-                    <div class="value">R$2,00</div>
-                    <div class="card-footer-custom">+15% desde o último mês</div>
+        <div id="card">
+            <div class="row">
+                <!-- Card 1: Total Gasto R$/L -->
+                <div class="col-md-4 col-12 cards-content">
+                    <div class="card-custom card-green">
+                        <h5>Total Gasto R$/L</h5>
+                        <div class="value fs-4">R$2,00</div>
+                        <div class="card-footer-custom">+15% desde o último mês</div>
+                    </div>
+                </div>
+                <!-- Card 2: Total Gasto Mensal -->
+                <div class="col-md-4 col-12 cards-content">
+                    <div class="card-custom card-blue">
+                        <h5>💧 Total Gasto Mensal</h5>
+                        <div class="value">2000L</div>
+                        <div class="card-footer-custom">+35% desde o último mês</div>
+                    </div>
+                </div>
+                <!-- Card 3: Total Gasto -->
+                <div class="col-md-4 col-12 cards-content">
+                    <div class="card-custom card-blue">
+                        <h5>💧 Total Gasto</h5>
+                        <div class="value">1560L</div>
+                        <div class="card-footer-custom">+20% desde o último mês</div>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Card 2: Total Gasto Mensal -->
-            <div class="col-md-4">
-                <div class="card-custom card-blue">
-                    <h5>💧 Total Gasto Mensal</h5>
-                    <div class="value">2000L</div>
-                    <div class="card-footer-custom">+35% desde o último mês</div>
+        </div>
+        <div id="historico" class="card">
+            <div class="container">
+                <div class="row">
+                    <!-- Cabeçalho -->
+                    <div class="card-header col-12">
+                        <span>Histórico</span>
+                        <!-- Dropdown de Data -->
+                        <div class="dropdown">
+                            <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                26/10/2024
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">25/10/2024</a></li>
+                                <li><a class="dropdown-item" href="#">26/10/2024</a></li>
+                                <li><a class="dropdown-item" href="#">27/10/2024</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Corpo do Card -->
+                    <div class="card-body">
+                        <!-- Item de Histórico -->
+                        <div class="history-item">
+                            <div>
+                                <div class="date">28/10/2024</div>
+                                <div>Consumo Total</div>
+                            </div>
+                            <div class="value">1500L</div>
+                            <div class="three-dots">
+                                &#x22EE; <!-- Ícone de três pontos verticais -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Card 3: Total Gasto -->
-            <div class="col-md-4">
-                <div class="card-custom card-blue">
-                    <h5>💧 Total Gasto</h5>
-                    <div class="value">1560L</div>
-                    <div class="card-footer-custom">+20% desde o último mês</div>
+        </div>
+        <div id="climaTempo" class="weather-card">
+            <div class="backgroundImg">
+                <!-- Localização -->
+                <div class="location">
+                    <i class="bi bi-geo-alt"></i>
+                    <span id="city">Carregando...</span>
+                </div>
+                <!-- Temperatura Atual -->
+                <h1 id="current-temp">--°C</h1>
+                <h2>
+                    <span id="temp-max">--°</span>
+                    <span class="text-secondary" id="temp-min">--°</span>
+                </h2>
+                <!-- Previsão -->
+                <div class="forecast">
+                    <div>
+                        <i class="bi bi-cloud" id="icon1"></i>
+                        <p>Amanhã</p>
+                        <span id="forecast1">--° --°</span>
+                    </div>
+                    <div>
+                        <i class="bi bi-brightness-high" id="icon2"></i>
+                        <p>Sexta-Feira</p>
+                        <span id="forecast2">--° --°</span>
+                    </div>
+                    <div>
+                        <i class="bi bi-cloud-rain" id="icon3"></i>
+                        <p>Sábado</p>
+                        <span id="forecast3">--° --°</span>
+                    </div>
+                    </div>
+                    <!-- Alerta -->
+                        <div class="alert" id="alert">
+                            <i class="bi bi-exclamation-triangle-fill"></i>
+                        <div>
+                        <p class="highlight" id="alert-text">CARREGANDO ALERTA</p>
+                        <span>Atualizando...</span>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div id="tanque" class="card-container">
+            <!-- Título e Dropdown -->
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h4>Consumo Diário</h4>
+                <div>
+                    <button class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        12/12/2024
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">11/12/2024</a></li>
+                        <li><a class="dropdown-item" href="#">12/12/2024</a></li>
+                        <li><a class="dropdown-item" href="#">13/12/2024</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Custo da Água -->
+            <div class="water-cost mb-3">
+                <span>💧 R$0,20/L</span>
+            </div>
+            <!-- Consumo Ideal e Consumo de Hoje -->
+            <div class="row mb-4">
+                <!-- Consumo Ideal -->
+                <div class="col-md-6">
+                    <div class="ideal-box">
+                        <h5>Consumo Ideal</h5>
+                        <h3>150L <span class="arrow-up">↑</span></h3>
+                    </div>
+                </div>
+                <!-- Consumo de Hoje -->
+                <div class="col-md-6">
+                    <div class="today-box">
+                        <h5>Consumo de Hoje</h5>
+                        <h3>400L <span class="arrow-down">↑</span></h3>
+                    </div>
+                </div>
+            </div>
+            <!-- Tanque de Água -->
+            <div class="tank-container">
+                <div class="tank"></div>
+            </div>
+        </div>
+        <!-- Bottom Navigation Bar -->
+        <div id="navBottom" class="bottom-nav d-flex justify-content-around align-items-center py-2">
+            <a href="#" class="active">
+                <i class="bi bi-house"></i>
+            </a>
+            <a href="#">
+                <i class="bi bi-bar-chart"></i>
+            </a>
+            <a href="#">
+                <i class="bi bi-gear"></i>
+            </a>
+            <a href="#">
+                <i class="bi bi-box-arrow-right"></i>
+            </a>
+        </div>
     </div>
+    <script src="./../src/config/js/allComponents/perfilMenu.js"></script>
+    <script src="./../src/config/js/overview/climaTempo.js"></script>
     <script src="./../src/config/js/dasboard/navBar.js"></script>
-    <script src="./../src/config/js/dasboard/graficos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <a style="display: none;" href="https://www.flaticon.com/br/icones-gratis/rfid" title="rfid ícones">Rfid ícones criados por Freepik - Flaticon</a>
+    <!-- <a style="display: none;" href="https://www.flaticon.com/br/icones-gratis/rfid" title="rfid ícones">Rfid ícones criados por Freepik - Flaticon</a> -->
+
     <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png" />
@@ -23,7 +24,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <div class="container-fluid dadContainer">
+    <div class="dadContainer">
         <div class="sidebar">
             <div class="logo">
                 <img src="./../public/images/logo-Sustentavel.svg" alt="Logo">
@@ -45,7 +46,52 @@
             </nav>
             <span class="part"></span>
             <i class="icon-exit bi bi-box-arrow-right"></i>
-        </div>  
+        </div>
+        <div id="perfilMenu">
+            <div class="dropdow__wrapper hide dropdown__wrapper--fade-in none">
+                <!-- Perfil -->
+                <div class="d-flex align-items-center mb-4">
+                    <img src="https://via.placeholder.com/50" alt="User Profile" class="profile-img me-2">
+                    <div>
+                        <h6 class="mb-0">
+                            User Test
+                        </h6>
+                        <small class="text-email">usertest@gmail.com</small>
+                    </div>
+                </div>
+    
+                <!-- Menu Links -->
+                <nav>
+                    <a href="#" class="nav-link-custom nav-link-active">
+                        <i class="bi bi-person "></i> Account
+                    </a>
+                    <a href="#" class="nav-link-custom">
+                        <i class="bi bi-gear"></i> Settings
+                    </a>
+                    <a href="#" class="nav-link-custom">
+                        <i class="bi bi-book"></i> Guide
+                    </a>
+                    <a href="#" class="nav-link-custom">
+                        <i class="bi bi-question-circle"></i> Help
+                    </a>
+                </nav>
+    
+                <!-- Plano Gratuito -->
+                <div class="footer my-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <p class="mb-0">Free Plan</p>
+                        </div>
+                        <a href="#" class="upgrade-btn">Upgrade</a>
+                    </div>
+                </div>
+    
+                <!-- Sair -->
+                <a href="#" class="exit text-danger">
+                    <i class="bi bi-box-arrow-left"></i> Sign Out
+                </a>
+            </div>
+        </div>
         <nav class="navbar">
             <!-- Título -->
             <a href="#" class="navbar-brand">Dashboard</a>
@@ -56,7 +102,7 @@
                 <div class="nav-divider"></div>
                 <div class="user-profile">
                     @userTest
-                <div class="user-circle"></div>
+                <div id="btnUserPerfil" class="user-circle"></div>
                 </div>
             </div>
         </nav>
@@ -83,6 +129,7 @@
             </div>
         </div>
     </div>
+    <script src="./../src/config/js/allComponents/perfilMenu.js"></script>
     <script src="./../src/config/js/dasboard/navBar.js"></script>
     <script src="./../src/config/js/dasboard/graficos.js"></script>
 </body>

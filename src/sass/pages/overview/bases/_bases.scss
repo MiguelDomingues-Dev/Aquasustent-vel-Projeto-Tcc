@@ -1,0 +1,8 @@
+@use './../settings/settings' as config;
+@import './reset';
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: config.$color1 !important;
+}

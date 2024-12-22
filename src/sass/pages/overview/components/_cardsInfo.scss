@@ -1,0 +1,38 @@
+@use './../settings/settings' as config;
+
+.card-custom {
+    width: 310px;
+    border-radius: 15px;
+    padding: 20px;
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.card-green {
+    background-color: config.$color6;
+}
+
+.card-blue {
+    background-color: #0984c17c;
+}
+
+.card-footer-custom {
+    font-size: 0.9rem;
+    color: config.$color8;
+    margin-top: 10px;
+}
+
+.value {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+@media (max-width: 575px) {
+    .card-custom {
+        border: none;
+        border-radius: 10px;
+        padding: 15px;
+        margin: 10px 0;
+    }
+}
