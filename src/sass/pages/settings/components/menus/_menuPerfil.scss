@@ -1,0 +1,112 @@
+@use './../../settings/settings' as config;
+
+#perfilMenu {
+    position: absolute;
+    z-index: 2;
+    top: 4rem;
+    right: 27.5rem;
+    color: config.$color8;
+    .dropdow__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        animation: fadeOutAnimation ease-in-out 0.3s forwards;
+        width: 19rem;
+        right: 1rem;
+        padding: 1rem;
+        background-color: config.$color2;
+        border-radius: 15px;
+        box-shadow: 0 2px 5px rgba(129, 129, 129, 0.2);
+    }
+
+    .dropdown__wrapper--fade-in{
+        animation: fadeInAnimation ease-in-out 0.3s forwards;
+    }
+    
+    .none {
+        display: none;
+    }
+
+    .hide {
+        opacity: 0;
+        visibility: hidden;
+        animation: fadeInAnimation ease-in-out 0.3s forwards;
+    }
+
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    @keyframes fadeOutAnimation{
+        0% {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    .profile-img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .text-email {
+        color: #9e9a9a;
+    }
+
+    .nav-link-custom {
+        color: config.$color4;
+        padding: 10px 15px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        i {
+            font-size: 1.2rem;
+            color: #9b9999;
+        }
+    }
+
+    .nav-link-custom:hover,
+    .nav-link-active {
+        background-color: config.$color4;
+        color: #f1f1f1;
+    }
+
+    .upgrade-btn {
+        background-color: #e0ebff;
+        color: config.$color7;
+        font-weight: 600;
+        padding: 5px 10px;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+
+    .upgrade-btn:hover {
+        background-color: #4c6ef5;
+        color: #ffffff;
+    }
+
+    .footer {
+        font-size: 0.9rem;
+        color: #6c757d;
+    }
+
+    .exit {
+        color: config.$color4;
+        padding: 10px 15px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        i {
+            font-size: 1.2rem;
+            color: #9b9999;
+        }
+    }
+}

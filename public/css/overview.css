@@ -593,7 +593,7 @@ body {
   font-weight: 500;
 }
 #menuMobile .nav-link-custom:hover {
-  background-color: #f1f5f9;
+  color: #003127;
   border-radius: 5px;
 }
 #menuMobile .bottom-nav {
