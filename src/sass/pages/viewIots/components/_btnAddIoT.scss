@@ -1,0 +1,13 @@
+@use './../settings/settings' as config;
+
+#btnAddition {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    i {
+        font-size: 10rem;
+        color: config.$color7;
+        cursor: pointer;
+    }
+}
