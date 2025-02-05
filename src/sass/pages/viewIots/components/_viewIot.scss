@@ -1,0 +1,16 @@
+@use './../settings/settings' as config;
+
+.containerIot {
+    width: 100%;
+    height: 10vh;
+    #btnadddition {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        i {
+            width: 9.5625rem;
+            height: 9.5625rem;
+        }
+    }
+}

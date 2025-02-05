@@ -1,0 +1,56 @@
+@use './../../settings/settings' as config;
+
+/* Estilo do menu hamburguer */
+#menuMobile {
+    display: none;
+    header {
+        button {
+            i {
+                color: config.$color6;
+            }
+        }
+        span {
+            color: config.$color8;
+        }
+        i {
+            color: config.$color6;
+        }
+    }
+    .offcanvas {
+        width: 250px;
+        color: config.$color8;
+        background-color: config.$color2;
+    }
+    .offcanvas-header {
+        background-color: config.$color3;
+        button {
+            color: config.$color6;
+        }
+    }
+    .nav-link-custom {
+        color: config.$color8;
+        font-weight: 500;
+    }
+    .nav-link-custom:hover {
+        color: config.$color5;
+        border-radius: 5px;
+    }
+    
+    /* Navbar fixa no bottom */
+    .bottom-nav {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: config.$color5;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+    .bottom-nav a {
+        color: config.$color8;
+        text-decoration: none;
+        font-size: 1.4rem;
+    }
+    .bottom-nav a.active {
+        color: config.$color6;
+    }
+}

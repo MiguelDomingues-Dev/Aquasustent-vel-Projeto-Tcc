@@ -65,7 +65,7 @@ body {
   position: absolute;
   z-index: 2;
   top: 4rem;
-  right: 27.5rem;
+  right: 0.5rem;
   color: #fff;
 }
 #perfilMenu .dropdow__wrapper {
@@ -125,8 +125,7 @@ body {
   font-size: 1.2rem;
   color: #9b9999;
 }
-#perfilMenu .nav-link-custom:hover,
-#perfilMenu .nav-link-active {
+#perfilMenu .nav-link-custom:hover {
   background-color: #478F96;
   color: #f1f1f1;
 }
@@ -316,4 +315,19 @@ body {
   color: #CC8889;
 }
 
-/*# sourceMappingURL=settings.css.map */
+.containerIot {
+  width: 100%;
+  height: 10vh;
+}
+.containerIot #btnadddition {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.containerIot #btnadddition i {
+  width: 9.5625rem;
+  height: 9.5625rem;
+}
+
+/*# sourceMappingURL=viewIots.css.map */

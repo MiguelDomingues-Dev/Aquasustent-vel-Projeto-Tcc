@@ -1,0 +1,63 @@
+@use './../settings/settings' as config;
+
+.sidebar {
+    width: 80px;
+    background-color: config.$color2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-top: 20px;
+    box-shadow: 0px 0 23.1px rgba(255, 255, 255, 0.042);
+    .part {
+        width: 44px;
+        height: 2px;
+        background-color: #2D2F39;
+    }
+    .logo {
+        margin-bottom: 30px;
+        img {
+            width: 60px;
+            height: 60px;
+        }
+    }
+    .nav {
+        display: flex;
+        justify-content: space-evenly;
+        height: 192px;
+    }
+    .nav-link {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+        font-size: 1.2rem;
+        color: config.$color1;
+        transition: background-color 0.3s ease;
+        .icon {
+            color: config.$color8;
+        }
+    }
+    .nav-link.active {
+        width: 45px;
+        height: 45px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: config.$color8;
+        border-radius: 8px;
+        background-color: #00b21b67;
+        .icon {
+            font-size: 1.5rem;
+        }
+    }
+    .icon-exit {
+        cursor: pointer;
+        color: #CC8889;
+    }
+}

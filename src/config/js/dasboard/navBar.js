@@ -1,44 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
     const links = document.querySelectorAll('.nav-link');
-    
-    // Recupera a seção salva no localStorage (se existir)
-    const activeSection = localStorage.getItem('activeSection');
-    
-    if (activeSection) {
-        links.forEach(link => {
-            const section = link.getAttribute('data-section');
-            if (section === activeSection) {
-                link.classList.add('active'); // Aplica classe ao link salvo
-            } else {
-                link.classList.remove('active'); // Remove de outros links
-            }
-        });
-    }
+    const paginas = {
+        home: 'overview.html',
+        analytics: 'dashboards.html',
+        settings: 'settings.html',
+        viewiot: 'additionIoT.html'
+    };
 
-    // Adiciona evento de clique aos links
+    // Recupera a seção ativa do localStorage
+    const activeSection = localStorage.getItem('activeSection');
+
+    // Define a seção ativa ao carregar a página
+    links.forEach(link => {
+        const section = link.getAttribute('data-section');
+        link.classList.toggle('active', section === activeSection);
+    });
+
+    // Adiciona evento de clique para cada link
     links.forEach(link => {
         link.addEventListener('click', (event) => {
-            event.preventDefault(); // Previne comportamento padrão do link
+            event.preventDefault();
 
-            // Remove a classe "active" de todos os links
-            links.forEach(l => l.classList.remove('active'));
-
-            // Adiciona a classe "active" ao link clicado
-            link.classList.add('active');
-
-            // Salva a seção no localStorage
+            // Define a nova seção ativa
             const section = link.getAttribute('data-section');
             localStorage.setItem('activeSection', section);
 
-            // Redireciona para a página correspondente
-            const paginas = {
-                home: 'overview.html',
-                analytics: 'dashboards.html',
-                settings: 'settings.html',
-                profile: 'profile.html',
-                logout: 'logout.html'
-            };
+            // Atualiza a classe "active" nos links
+            links.forEach(l => l.classList.toggle('active', l === link));
 
+            // Redireciona para a página correspondente
             if (paginas[section]) {
                 window.location.href = paginas[section];
             } else {
