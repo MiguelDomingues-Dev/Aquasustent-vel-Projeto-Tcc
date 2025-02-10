@@ -160,12 +160,79 @@
                 </div>
             </div>
         </nav>
+        <div id="btnAddition">
+            <i id="btnAdditionIoT" class="bi bi-plus-circle" data-bs-toggle="modal" data-bs-target="#espacoModal"></i>
+        </div>
         <div class="containerIot">
-            <div id="btnAddition">
-                <i class="bi bi-plus-circle"></i>
+            <div id="spaceModdal1">
+                <div class="modal fade overlay" id="espacoModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header border-0">
+                                <button type="button" class="btn" data-bs-dismiss="modal">
+                                    <i class="bi bi-arrow-left"></i>
+                                </button>
+                                <h5 class="modal-title" id="modalLabel">Crie um novo espaço</h5>
+                                <span>
+                                    <h3>Passos</h3>
+                                    <p>1/4</p>
+                                </span>
+                            </div>
+                            <div class="modal-body">
+                                <div class="single-input">
+                                    <label for="nameIot">Insira o nome do seu espaço</label>
+                                    <input type="text" class="form-control text-center" placeholder="Chuveiro" id="nameIot">
+                                </div>
+                                <p class="mt-3">Sem inspiração? Experimente um desses nomes:</p>
+                                <div class="d-flex justify-content-center gap-2">
+                                    <button class="btn btn-green btnIot" value="Torneira Cozinha">Torneira Cozinha</button>
+                                    <button class="btn btn-green btnIot" value="Chuveiro">Chuveiro</button>
+                                    <button class="btn btn-green btnIot" value="Torneira Garagem">Torneira Garagem</button>
+                                </div>
+                                <div class="modal-footer border-0">
+                                    <button type="butt  on" class="btn btn-dark" id="btnContinuarAdd">Continuar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="containerIot">
+            <div id="prepareCel">
+                <div>
+                    <div class="modal fade overlay2" id="espacoModal2" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content2">
+                                <div class="modal-header2 border-0">
+                                    <button type="button" class="btn" data-bs-dismiss="modal">
+                                        <i class="bi bi-arrow-left"></i>
+                                    </button>
+                                    <h5 class="modal-title" id="modalLabel">Prepare  a câmera</h5>
+                                    <span>
+                                        <h3>Passos</h3>
+                                        <p>2/4</p>
+                                    </span>
+                                </div>
+                                <div class="modal-body2">
+                                    <div class="single-input">
+                                        <label for="nameIot">Insira o nome do seu espaço</label>
+                                        <input type="text" class="form-control text-center" placeholder="Chuveiro" id="nameIot">
+                                    </div>
+                                    
+                                    <div class="modal-footer border-0">
+                                        <button type="button" class="btn btn-dark">Continuar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <script src="./../src/config/js/viewIot/iotPageChanger.js"></script>
+    <script src="./../src/config/js/viewIot/function.js"></script>
     <script src="./../src/config/js/allComponents/perfilMenu.js"></script>
     <script src="./../src/config/js/dasboard/navBar.js"></script>
     <script src="./../src/config/js/setting/configUSer.js"></script>

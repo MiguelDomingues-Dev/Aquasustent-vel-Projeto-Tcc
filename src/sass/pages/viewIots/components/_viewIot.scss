@@ -15,6 +15,9 @@
     padding: 0px !important;
     .containerIot {
         grid-area: containerIot;
+        #prepareCel {
+            display: none;
+        }
     }
     .sidebar {
         grid-area: sidebar;

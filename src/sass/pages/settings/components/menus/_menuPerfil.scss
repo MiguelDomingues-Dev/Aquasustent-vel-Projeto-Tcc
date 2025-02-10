@@ -4,7 +4,7 @@
     position: absolute;
     z-index: 2;
     top: 4rem;
-    right: 27.5rem;
+    right: 0.5rem;
     color: config.$color8;
     .dropdow__wrapper {
         display: flex;
@@ -71,8 +71,7 @@
         }
     }
 
-    .nav-link-custom:hover,
-    .nav-link-active {
+    .nav-link-custom:hover{ 
         background-color: config.$color4;
         color: #f1f1f1;
     }

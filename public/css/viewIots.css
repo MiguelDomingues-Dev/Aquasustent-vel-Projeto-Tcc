@@ -223,6 +223,9 @@ body {
 .containerViewIot .containerIot {
   grid-area: containerIot;
 }
+.containerViewIot .containerIot #prepareCel {
+  display: none;
+}
 .containerViewIot .sidebar {
   grid-area: sidebar;
   min-width: 80px;
@@ -325,6 +328,262 @@ body {
   font-size: 10rem;
   color: #00B21B;
   cursor: pointer;
+}
+
+.overlay {
+  position: relative;
+}
+.overlay .modal-content {
+  display: flex;
+  align-items: center;
+  gap: 10px 0px;
+  width: 90rem;
+  height: 38rem;
+  background-image: url(/public/images/backgroundPageIot.png);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  transform: translate(-30%, 7%);
+}
+@media (max-width: 768px) {
+  .overlay .modal-content {
+    width: 90%;
+    height: auto;
+    padding: 15px;
+    transform: none;
+    position: relative;
+  }
+}
+.overlay .modal-content .modal-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 5.5625rem;
+  border-radius: 0.625rem;
+  background-color: rgba(11, 50, 69, 0.8392156863);
+}
+@media (max-width: 768px) {
+  .overlay .modal-content .modal-header {
+    height: auto;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.overlay .modal-content .modal-header .btn {
+  margin: 0;
+  padding: 0;
+}
+.overlay .modal-content .modal-header .btn i {
+  color: #fff;
+  font-size: 2rem;
+}
+@media (max-width: 768px) {
+  .overlay .modal-content .modal-header .btn i {
+    font-size: 1.5rem;
+  }
+}
+.overlay .modal-content .modal-header .modal-title {
+  margin: 0;
+  padding: 0;
+  font-size: 3.25rem;
+}
+@media (max-width: 768px) {
+  .overlay .modal-content .modal-header .modal-title {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .overlay .modal-content .modal-header span h3 {
+    font-size: 1.2rem;
+  }
+}
+.overlay .modal-content .modal-header span p {
+  margin: 0;
+  color: #00FF27;
+  font-size: 1.3125rem;
+}
+@media (max-width: 768px) {
+  .overlay .modal-content .modal-header span p {
+    font-size: 1rem;
+  }
+}
+.overlay .modal-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 67.1875rem;
+  height: 46.6875rem;
+  border-radius: 0.625rem;
+  background-color: rgba(11, 50, 69, 0.8392156863);
+}
+@media (max-width: 768px) {
+  .overlay .modal-body {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+}
+.overlay .modal-body .single-input input {
+  width: 28.0625rem;
+  color: #fff;
+  outline: 0;
+  box-shadow: none;
+  border: 2px solid #00B21B;
+  background-color: #003127;
+}
+@media (max-width: 768px) {
+  .overlay .modal-body .single-input input {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+.overlay .modal-body .single-input input::placeholder {
+  color: rgba(255, 255, 255, 0.4980392157);
+}
+.overlay .btn-green {
+  background-color: #00B21B;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+@media (max-width: 768px) {
+  .overlay .btn-green {
+    font-size: 1rem;
+    padding: 8px 15px;
+  }
+}
+
+#prepareCel .overlay2 {
+  position: relative;
+}
+#prepareCel .overlay2 .modal-content2 {
+  display: flex;
+  align-items: center;
+  gap: 10px 0px;
+  width: 90rem;
+  height: 38rem;
+  background-image: url(/public/images/backgroundPageIot.png);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  transform: translate(-30%, 7%);
+}
+@media (max-width: 768px) {
+  #prepareCel .overlay2 .modal-content2 {
+    width: 90%;
+    height: auto;
+    padding: 15px;
+    transform: none;
+    position: relative;
+  }
+}
+#prepareCel .overlay2 .modal-content2 .modal-header2 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 5.5625rem;
+  border-radius: 0.625rem;
+  background-color: rgba(11, 50, 69, 0.8392156863);
+}
+@media (max-width: 768px) {
+  #prepareCel .overlay2 .modal-content2 .modal-header2 {
+    height: auto;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+#prepareCel .overlay2 .modal-content2 .modal-header2 .btn {
+  margin: 0;
+  padding: 0;
+}
+#prepareCel .overlay2 .modal-content2 .modal-header2 .btn i {
+  color: #fff;
+  font-size: 2rem;
+}
+@media (max-width: 768px) {
+  #prepareCel .overlay2 .modal-content2 .modal-header2 .btn i {
+    font-size: 1.5rem;
+  }
+}
+#prepareCel .overlay2 .modal-content2 .modal-header2 .modal-title {
+  margin: 0;
+  padding: 0;
+  font-size: 3.25rem;
+}
+@media (max-width: 768px) {
+  #prepareCel .overlay2 .modal-content2 .modal-header2 .modal-title {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  #prepareCel .overlay2 .modal-content2 .modal-header2 span h3 {
+    font-size: 1.2rem;
+  }
+}
+#prepareCel .overlay2 .modal-content2 .modal-header2 span p {
+  margin: 0;
+  color: #00FF27;
+  font-size: 1.3125rem;
+}
+@media (max-width: 768px) {
+  #prepareCel .overlay2 .modal-content2 .modal-header2 span p {
+    font-size: 1rem;
+  }
+}
+#prepareCel .overlay2 .modal-body2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 67.1875rem;
+  height: 46.6875rem;
+  border-radius: 0.625rem;
+  background-color: rgba(11, 50, 69, 0.8392156863);
+}
+@media (max-width: 768px) {
+  #prepareCel .overlay2 .modal-body2 {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+}
+#prepareCel .overlay2 .modal-body2 .single-input input {
+  width: 28.0625rem;
+  color: #fff;
+  outline: 0;
+  box-shadow: none;
+  border: 2px solid #00B21B;
+  background-color: #003127;
+}
+@media (max-width: 768px) {
+  #prepareCel .overlay2 .modal-body2 .single-input input {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+#prepareCel .overlay2 .modal-body2 .single-input input::placeholder {
+  color: rgba(255, 255, 255, 0.4980392157);
+}
+#prepareCel .overlay2 .btn-green2 {
+  background-color: #00B21B;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+@media (max-width: 768px) {
+  #prepareCel .overlay2 .btn-green2 {
+    font-size: 1rem;
+    padding: 8px 15px;
+  }
 }
 
 /*# sourceMappingURL=viewIots.css.map */

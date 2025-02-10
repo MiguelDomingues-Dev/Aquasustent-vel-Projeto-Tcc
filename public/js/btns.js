@@ -4,4 +4,4 @@ document.querySelector("#btnLogin").addEventListener('click', function () {
 
 document.querySelector(".btnCadastrar").addEventListener('click', function () {
     window.location.href = "./../../pages/pages/cadastro.html"
-})
+})  
