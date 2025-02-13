@@ -1,6 +1,17 @@
 {
+  "name": "aquasustent-veltcc",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.1.0"
+  },
   "dependencies": {
-    "dotenv": "^16.4.7",
-    "scss": "^0.2.4"
+    "firebase": "^10.9.0"
   }
 }
