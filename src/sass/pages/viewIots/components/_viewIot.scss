@@ -1,16 +1,59 @@
 @use './../settings/settings' as config;
 
-.containerIot {
+.containerViewIot {
+    display: grid;
+    gap: 1rem;
+    grid-template-areas:
+        "sidebar navbar navbar"
+        "sidebar containerIot containerIot"
+        "sidebar containerIot containerIot"
+    ;
+    grid-template-columns: 5% 3fr 1fr;
+    grid-template-rows: auto auto 1fr;
     width: 100%;
-    height: 10vh;
-    #btnadddition {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        i {
-            width: 9.5625rem;
-            height: 9.5625rem;
+    height: 100%;
+    padding: 0px !important;
+    .containerIot {
+        grid-area: containerIot;
+        #prepareCel {
+            display: none;
+        }
+    }
+    .sidebar {
+        grid-area: sidebar;
+        min-width: 80px;
+    }
+
+    .navbar {
+        grid-area: navbar;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #navBottom {
+        display: none !important;
+    }
+
+    @media (max-width: 576px) {
+        grid-template-areas:
+            "menuMobile"
+            "card"
+            "historico"
+            "climaTempo"
+            "tanque";
+        grid-template-columns: 1fr;
+        .sidebar,
+        .navbar {
+            display: none;
+        }
+
+        #menuMobile {
+            display: block;
+        }
+
+        #navBottom {
+            display: block;
         }
     }
 }
