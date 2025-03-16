@@ -1,8 +1,8 @@
 @use './../../settings/settings' as config;
 
-#spaceModdal1 {
+#configureWifi {
     position: relative;
-    .overlay {        
+    .overlay {
         .modal-content {
             display: flex;
             align-items: center;
@@ -101,23 +101,45 @@
                 padding: 10px;
             }
     
-            .single-input {
-                input {
-                    width: 28.0625rem;
-                    color: config.$color8;
-                    outline: 0;
-                    box-shadow: none;
-                    border: 2px solid config.$color7;
-                    background-color: config.$color5;
-    
-                    @media (max-width: 768px) {
-                        width: 100%;
-                        font-size: 1rem;
-                    }
+            .steps {
+                h3 {
+                    font-size: 2.125rem;
+                    font-weight: 600;
                 }
-    
-                input::placeholder {
-                    color: #ffffff7f;
+                hr {
+                    border: 1.5px solid;
+                    color: config.$color7;
+                }
+            }
+
+            .input-single {
+                display: flex;
+                justify-content: space-evenly;
+                flex-direction: column;
+                gap: 10px 0px;
+                height: 100%;
+                #wifi {
+                    width: 35.5625rem;
+                    border: none;
+                    outline: none;
+                    border-bottom: 2px solid config.$color7;
+                    background-color: transparent;
+                }
+                #passwordWifi {
+                    width: 35.5625rem;
+                    border: none;
+                    outline: none;
+                    border-bottom: 2px solid config.$color7;
+                    background-color: transparent;
+                }
+                ::placeholder {
+                    color: config.$color8;
+                }
+            }
+
+            .confirm-steps {
+                label {
+                    font-size: 1.25rem;
                 }
             }
         }

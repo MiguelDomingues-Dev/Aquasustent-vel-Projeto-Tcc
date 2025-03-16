@@ -36,7 +36,7 @@
         width: 100%;
         padding: 10px 0;
         font-size: 1.2rem;
-        color: config.$color1;
+        color: config.$color8;
         transition: background-color 0.3s ease;
         .icon {
             color: config.$color8;
@@ -49,7 +49,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        color: config.$color8;
+        color: config.$color8 !important;
         border-radius: 8px;
         background-color: #00b21b67;
         .icon {

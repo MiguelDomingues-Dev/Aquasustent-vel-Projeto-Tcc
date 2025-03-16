@@ -132,6 +132,17 @@
             border-radius: 5px;
             background-color: config.$color7;
         }
+        #btnLogin {
+            height: 40px;
+            padding: 5px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            color: config.$color8;
+            font-size: 16px;
+            border-radius: 5px;
+            background-color: config.$color7;
+        }
         #accountExist {
             align-self: flex-start;
             font-weight: config.$fontPeso;

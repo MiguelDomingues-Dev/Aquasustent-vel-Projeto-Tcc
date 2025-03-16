@@ -13,7 +13,7 @@
     <link rel="manifest" href="../favicon_io/site.webmanifest" />
 
     <!-- Css principal! -->
-    <link rel="stylesheet" href="./../public/css/viewIots.css">
+    <link rel="stylesheet" href="./../css/viewIots.css">
 
     <title>ViewIoTs</title>
 
@@ -27,10 +27,10 @@
     <div class="container-fluid containerViewIot">
         <div class="sidebar">
             <div class="logo">
-                <img src="./../public/images/logo-Sustentavel.svg" alt="Logo">
+                <img src="./../images/logo-Sustentavel.svg" alt="Logo">
             </div>
             <span class="part"></span>
-            <nav class="nav flex-column w-100">
+            <nav class="nav w-100">
                 <a href="./additionIoT.html" class="nav-link" data-section="viewiot">
                     <i class="bi bi-broadcast"></i>
                 </a>
@@ -40,7 +40,7 @@
                 <a href="./dashboards.html" class="nav-link" data-section="analytics">
                     <i class="bi bi-bar-chart icon"></i>
                 </a>
-                <a href="#" class="nav-link" data-section="settings">
+                <a href="./settings.html" class="nav-link" data-section="settings">
                     <i class="bi bi-gear icon"></i>
                 </a>
             </nav>
@@ -59,7 +59,7 @@
             </header>
                 <!-- Offcanvas Menu -->
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
-                <div class="offcanvas-header">
+                <div class="offcaznvas-header">
                     <h5 class="offcanvas-title">Menu</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
                 </div>
@@ -160,12 +160,13 @@
                 </div>
             </div>
         </nav>
-        <div id="btnAddition">
-            <i id="btnAdditionIoT" class="bi bi-plus-circle" data-bs-toggle="modal" data-bs-target="#espacoModal"></i>
+        <div id="btnAddition" class="plus-centered .plus-corner">
+            <i id="btnAdditionIoT" class="bi bi-plus-circle" data-bs-toggle="modal" data-bs-target="#espacoModal1"></i>
         </div>
+        <div id="cardContainer"></div>
         <div class="containerIot">
             <div id="spaceModdal1">
-                <div class="modal fade overlay" id="espacoModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                <div class="modal fade overlay" id="espacoModal1" tabindex="-1" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header border-0">
@@ -190,7 +191,7 @@
                                     <button class="btn btn-green btnIot" value="Torneira Garagem">Torneira Garagem</button>
                                 </div>
                                 <div class="modal-footer border-0">
-                                    <button type="butt  on" class="btn btn-dark" id="btnContinuarAdd">Continuar</button>
+                                    <button type="button" class="btn btn-dark" id="btnContinuarAdd">Continuar</button>
                                 </div>
                             </div>
                         </div>
@@ -201,10 +202,10 @@
         <div class="containerIot">
             <div id="prepareCel">
                 <div>
-                    <div class="modal fade overlay2" id="espacoModal2" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                    <div class="modal fade overlay" id="espacoModal2" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
                         <div class="modal-dialog">
-                            <div class="modal-content2">
-                                <div class="modal-header2 border-0">
+                            <div class="modal-content">
+                                <div class="modal-header border-0">
                                     <button type="button" class="btn" data-bs-dismiss="modal">
                                         <i class="bi bi-arrow-left"></i>
                                     </button>
@@ -214,14 +215,97 @@
                                         <p>2/4</p>
                                     </span>
                                 </div>
-                                <div class="modal-body2">
-                                    <div class="single-input">
-                                        <label for="nameIot">Insira o nome do seu espaço</label>
-                                        <input type="text" class="form-control text-center" placeholder="Chuveiro" id="nameIot">
+                                <div class="modal-body">
+                                    <div class="steps">
+                                        <h3>Etapa 1: Ligar o Dispositivo</h3>
+                                        <div class="description-steps">
+                                            <p>Verifique se está conectado na energia</p>
+                                            <img src="../images/cabo-de-energia 1.png" alt="Imagem representativa de cabo de energia">
+                                        </div>
                                     </div>
-                                    
+                                    <div class="confirm-steps">
+                                        <input type="checkbox" name="confirmSteps" id="confirmSteps">
+                                        <label for="confirmSteps">Asperações logo acima foram concluidas corretamente </label>
+                                    </div>
                                     <div class="modal-footer border-0">
-                                        <button type="button" class="btn btn-dark">Continuar</button>
+                                        <button id="btnContinuarAdd2" type="button" class="btn btn-dark">Continuar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="containerIot">
+            <div id="configureWifi">
+                <div>
+                    <div class="modal fade overlay" id="espacoModal3" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header border-0">
+                                    <button type="button" class="btn" data-bs-dismiss="modal">
+                                        <i class="bi bi-arrow-left"></i>
+                                    </button>
+                                    <h5 class="modal-title" id="modalLabel">Configuração de Wi-Fi</h5>
+                                    <span>
+                                        <h3>Passos</h3>
+                                        <p>3/4</p>
+                                    </span>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="steps">
+                                        <h3>Digite o Wi-fi que a câmera se conectará</h3>
+                                        <hr>
+                                    </div>
+                                    <div class="input-single">
+                                        <input name="wifi" id="wifi" placeholder="Por favor, Dígite o Wi-Fi que será conectado">
+                                        <input name="passwordWifi" id="passwordWifi" type="password" placeholder="Digite a senha do Wi-Fi">
+                                    </div>
+                                    <div class="modal-footer border-0">
+                                        <button id="btnContinuarAdd3" type="button" class="btn btn-dark">Continuar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="containerIot">
+            <div id="finalizarIoT">
+                <div>
+                    <div class="modal fade overlay" id="espacoModal4" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header border-0">
+                                    <button type="button" class="btn" data-bs-dismiss="modal">
+                                        <i class="bi bi-arrow-left"></i>
+                                    </button>
+                                    <h5 class="modal-title" id="modalLabel">Finalizando a configuração</h5>
+                                    <span>
+                                        <h3>Passos</h3>
+                                        <p>4/4</p>
+                                    </span>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="steps">
+                                        <h3>Configuração concluída!</h3>
+                                        <hr>
+                                    </div>
+                                    <div class="description-info-iot">
+                                        <img src="../images/dropWater-happy.png" alt="Imagem representando uma gota d'água feliz">
+                                        <div class="description-un">
+                                            <p>Nome do espaço</p>
+                                            <p id="nameEspace">Torneira Cozinha</p>
+                                        </div>
+                                        <div class="description-two">
+                                            <p>Nome do Wi-Fi</p>
+                                            <p id="nameWifi">#Economize</p>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer border-0">
+                                        <button id="addCardBtn" type="button" class="btn btn-dark">Continuar</button>
                                     </div>
                                 </div>
                             </div>
@@ -231,11 +315,10 @@
             </div>
         </div>
     </div>
-    <script src="./../src/config/js/viewIot/iotPageChanger.js"></script>
-    <script src="./../src/config/js/viewIot/function.js"></script>
-    <script src="./../src/config/js/allComponents/perfilMenu.js"></script>
-    <script src="./../src/config/js/dasboard/navBar.js"></script>
-    <script src="./../src/config/js/setting/configUSer.js"></script>
+    <script src="./../js/js-pages/viewIot/addCard.js"></script>
+    <script src="./../js/js-pages/viewIot/function.js"></script>
+    <script src="./../js/js-pages/allComponents/perfilMenu.js"></script>
+    <script src="./../js/js-pages/dasboard/navBar.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

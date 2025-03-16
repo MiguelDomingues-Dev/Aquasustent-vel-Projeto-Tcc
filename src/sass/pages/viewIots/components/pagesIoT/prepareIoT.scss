@@ -2,11 +2,9 @@
 @use './../../settings/settings' as config;
 
 #prepareCel {
-
-    .overlay2 {
-        position: relative;
-    
-        .modal-content2 {
+    position: relative;
+    .overlay {
+        .modal-content {
             display: flex;
             align-items: center;
             gap: 10px 0px;
@@ -29,7 +27,7 @@
                 position: relative;
             }
     
-            .modal-header2 {
+            .modal-header {
                 display: flex;
                 justify-content: space-between;
                 width: 100%;
@@ -88,7 +86,7 @@
             }
         }
     
-        .modal-body2 {
+        .modal-body {
             display: flex;
             align-items: center;
             justify-content: space-evenly;
@@ -104,28 +102,27 @@
                 padding: 10px;
             }
     
-            .single-input {
-                input {
-                    width: 28.0625rem;
-                    color: config.$color8;
-                    outline: 0;
-                    box-shadow: none;
-                    border: 2px solid config.$color7;
-                    background-color: config.$color5;
-    
-                    @media (max-width: 768px) {
-                        width: 100%;
-                        font-size: 1rem;
-                    }
+            .steps {
+                h3 {
+                    font-size: 2.125rem;
+                    font-weight: 600;
                 }
-    
-                input::placeholder {
-                    color: #ffffff7f;
+                .description-steps {
+                    padding: 10px;
+                    border-radius: 0.3125rem;
+                    border: 2px solid config.$color5;
+                    background-color: #00b21bc5;
+                }
+            }
+
+            .confirm-steps {
+                label {
+                    font-size: 1.25rem;
                 }
             }
         }
     
-        .btn-green2 {
+        .btn-green {
             background-color: config.$color7;
             border: none;
             color: white;

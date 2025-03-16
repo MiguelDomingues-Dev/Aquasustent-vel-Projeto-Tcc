@@ -145,6 +145,17 @@ body {
   border-radius: 5px;
   background-color: #00B21B;
 }
+.container #formCadastro #btnLogin {
+  height: 40px;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #00B21B;
+}
 .container #formCadastro #accountExist {
   align-self: flex-start;
   font-weight: 400;

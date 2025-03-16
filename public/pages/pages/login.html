@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="../../favicon_io/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="../../'favicon_io/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon_io/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="../../favicon_io/favicon-16x16.png" />
-    <link rel="manifest" href="../favicon_io/site.webmanifest" />
-    <title>Cadastramento de usuário</title>
-    <link rel="stylesheet" href="../../public/css/cadastro.css">
+    <link rel="manifest" href="../../favicon_io/site.webmanifest" />
+    <title>Login de usuário</title>
+    <link rel="stylesheet" href="../../css/cadastro.css">
 
     <!-- Link - fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,6 +17,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> 
+
+    <script src="/"></script>
+    <script type="module" src="/src/config/firebase.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -28,30 +31,30 @@
                 T E C N O L O G I A & S U S T E N T A B I L I D A D E
             </h2>
             <p>Ajude economizando água para que nosso mundo no falte água</p>
-            <img src="./../../public/images/logo-Sustentavel.svg" alt="Imagem slogan png">
+            <img src="./../../images/logo-Sustentavel.svg" alt="Imagem slogan png">
         </section>
         <section id="formCadastro">
             <h2>Criar uma conta</h2>
             <div class="cadastrarWithGoogle">
-                <img src="./../../public/images/icon-google.png" alt="icon google">
+                <img src="./../../images/icon-google.png" alt="icon google">
                 <p>continue com o Google</p>
             </div>
             <p>- ou -</p>
-            <form action="">
+            <form method="post">
                 <div class="input-single">
-                    <input type="text" class="input" name="user" id="user" required>
-                    <label for="user">Nome de Usuário</label>
+                    <input type="text" class="input" name="email" id="email" required>
+                    <label for="user">Email</label>
                 </div>
                 <div class="input-single">
                     <input type="password" id="password" class="input" minlength="8" maxlength="8" required>
                     <label for="password">Senha</label>
                     <i class="bi bi-eye-fill input__icon" id="togglePassword"></i>
                 </div>
-                <button id="btnCadastrar">Login</button>
+                <button id="btnLogin">Login</button>
                 <p id="accountExist">Cadastre-se aqui <a href="./cadastro.html">criar conta</a></p>
             </form>
         </section>
     </div>
-    <script src="./../../public/js/validatePassword.js"></script>
+    <script src="../../js/viewpassword.js"></script>
 </body>
 </html>

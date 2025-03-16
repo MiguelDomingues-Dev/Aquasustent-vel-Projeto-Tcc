@@ -2,6 +2,7 @@ const profile = document.querySelector("#btnUserPerfil");
 const dropdown = document.querySelector(".dropdow__wrapper");
 
 profile.addEventListener('click', () => {
+    console.log("OLá")
     dropdown.classList.remove('none');
     dropdown.classList.toggle('hide');
 });

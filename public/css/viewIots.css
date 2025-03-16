@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -223,9 +224,6 @@ body {
 .containerViewIot .containerIot {
   grid-area: containerIot;
 }
-.containerViewIot .containerIot #prepareCel {
-  display: none;
-}
 .containerViewIot .sidebar {
   grid-area: sidebar;
   min-width: 80px;
@@ -293,7 +291,7 @@ body {
   width: 100%;
   padding: 10px 0;
   font-size: 1.2rem;
-  color: #03131B;
+  color: #fff;
   transition: background-color 0.3s ease;
 }
 .sidebar .nav-link .icon {
@@ -306,7 +304,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: #fff !important;
   border-radius: 8px;
   background-color: rgba(0, 178, 27, 0.4039215686);
 }
@@ -318,22 +316,39 @@ body {
   color: #CC8889;
 }
 
-#btnAddition {
+.plus-centered {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#btnAddition i {
+.plus-centered i {
   font-size: 10rem;
   color: #00B21B;
   cursor: pointer;
 }
 
-.overlay {
+.plus-corner {
+  position: absolute;
+  bottom: 100px;
+  right: 50px;
+  top: auto;
+  left: auto;
+  transform: none;
+  width: 60px;
+  height: 60px;
+  font-size: 18px;
+}
+.plus-corner i {
+  font-size: 5rem;
+  color: #00B21B;
+  cursor: pointer;
+}
+
+#spaceModdal1 {
   position: relative;
 }
-.overlay .modal-content {
+#spaceModdal1 .overlay .modal-content {
   display: flex;
   align-items: center;
   gap: 10px 0px;
@@ -348,7 +363,7 @@ body {
   transform: translate(-30%, 7%);
 }
 @media (max-width: 768px) {
-  .overlay .modal-content {
+  #spaceModdal1 .overlay .modal-content {
     width: 90%;
     height: auto;
     padding: 15px;
@@ -356,7 +371,7 @@ body {
     position: relative;
   }
 }
-.overlay .modal-content .modal-header {
+#spaceModdal1 .overlay .modal-content .modal-header {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -365,51 +380,51 @@ body {
   background-color: rgba(11, 50, 69, 0.8392156863);
 }
 @media (max-width: 768px) {
-  .overlay .modal-content .modal-header {
+  #spaceModdal1 .overlay .modal-content .modal-header {
     height: auto;
     flex-direction: column;
     text-align: center;
   }
 }
-.overlay .modal-content .modal-header .btn {
+#spaceModdal1 .overlay .modal-content .modal-header .btn {
   margin: 0;
   padding: 0;
 }
-.overlay .modal-content .modal-header .btn i {
+#spaceModdal1 .overlay .modal-content .modal-header .btn i {
   color: #fff;
   font-size: 2rem;
 }
 @media (max-width: 768px) {
-  .overlay .modal-content .modal-header .btn i {
+  #spaceModdal1 .overlay .modal-content .modal-header .btn i {
     font-size: 1.5rem;
   }
 }
-.overlay .modal-content .modal-header .modal-title {
+#spaceModdal1 .overlay .modal-content .modal-header .modal-title {
   margin: 0;
   padding: 0;
   font-size: 3.25rem;
 }
 @media (max-width: 768px) {
-  .overlay .modal-content .modal-header .modal-title {
+  #spaceModdal1 .overlay .modal-content .modal-header .modal-title {
     font-size: 2rem;
   }
 }
 @media (max-width: 768px) {
-  .overlay .modal-content .modal-header span h3 {
+  #spaceModdal1 .overlay .modal-content .modal-header span h3 {
     font-size: 1.2rem;
   }
 }
-.overlay .modal-content .modal-header span p {
+#spaceModdal1 .overlay .modal-content .modal-header span p {
   margin: 0;
   color: #00FF27;
   font-size: 1.3125rem;
 }
 @media (max-width: 768px) {
-  .overlay .modal-content .modal-header span p {
+  #spaceModdal1 .overlay .modal-content .modal-header span p {
     font-size: 1rem;
   }
 }
-.overlay .modal-body {
+#spaceModdal1 .overlay .modal-body {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -420,13 +435,13 @@ body {
   background-color: rgba(11, 50, 69, 0.8392156863);
 }
 @media (max-width: 768px) {
-  .overlay .modal-body {
+  #spaceModdal1 .overlay .modal-body {
     width: 100%;
     height: auto;
     padding: 10px;
   }
 }
-.overlay .modal-body .single-input input {
+#spaceModdal1 .overlay .modal-body .single-input input {
   width: 28.0625rem;
   color: #fff;
   outline: 0;
@@ -435,15 +450,15 @@ body {
   background-color: #003127;
 }
 @media (max-width: 768px) {
-  .overlay .modal-body .single-input input {
+  #spaceModdal1 .overlay .modal-body .single-input input {
     width: 100%;
     font-size: 1rem;
   }
 }
-.overlay .modal-body .single-input input::placeholder {
+#spaceModdal1 .overlay .modal-body .single-input input::placeholder {
   color: rgba(255, 255, 255, 0.4980392157);
 }
-.overlay .btn-green {
+#spaceModdal1 .overlay .btn-green {
   background-color: #00B21B;
   border: none;
   color: white;
@@ -452,16 +467,16 @@ body {
   font-size: 1.2rem;
 }
 @media (max-width: 768px) {
-  .overlay .btn-green {
+  #spaceModdal1 .overlay .btn-green {
     font-size: 1rem;
     padding: 8px 15px;
   }
 }
 
-#prepareCel .overlay2 {
+#prepareCel {
   position: relative;
 }
-#prepareCel .overlay2 .modal-content2 {
+#prepareCel .overlay .modal-content {
   display: flex;
   align-items: center;
   gap: 10px 0px;
@@ -476,7 +491,7 @@ body {
   transform: translate(-30%, 7%);
 }
 @media (max-width: 768px) {
-  #prepareCel .overlay2 .modal-content2 {
+  #prepareCel .overlay .modal-content {
     width: 90%;
     height: auto;
     padding: 15px;
@@ -484,7 +499,7 @@ body {
     position: relative;
   }
 }
-#prepareCel .overlay2 .modal-content2 .modal-header2 {
+#prepareCel .overlay .modal-content .modal-header {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -493,51 +508,51 @@ body {
   background-color: rgba(11, 50, 69, 0.8392156863);
 }
 @media (max-width: 768px) {
-  #prepareCel .overlay2 .modal-content2 .modal-header2 {
+  #prepareCel .overlay .modal-content .modal-header {
     height: auto;
     flex-direction: column;
     text-align: center;
   }
 }
-#prepareCel .overlay2 .modal-content2 .modal-header2 .btn {
+#prepareCel .overlay .modal-content .modal-header .btn {
   margin: 0;
   padding: 0;
 }
-#prepareCel .overlay2 .modal-content2 .modal-header2 .btn i {
+#prepareCel .overlay .modal-content .modal-header .btn i {
   color: #fff;
   font-size: 2rem;
 }
 @media (max-width: 768px) {
-  #prepareCel .overlay2 .modal-content2 .modal-header2 .btn i {
+  #prepareCel .overlay .modal-content .modal-header .btn i {
     font-size: 1.5rem;
   }
 }
-#prepareCel .overlay2 .modal-content2 .modal-header2 .modal-title {
+#prepareCel .overlay .modal-content .modal-header .modal-title {
   margin: 0;
   padding: 0;
   font-size: 3.25rem;
 }
 @media (max-width: 768px) {
-  #prepareCel .overlay2 .modal-content2 .modal-header2 .modal-title {
+  #prepareCel .overlay .modal-content .modal-header .modal-title {
     font-size: 2rem;
   }
 }
 @media (max-width: 768px) {
-  #prepareCel .overlay2 .modal-content2 .modal-header2 span h3 {
+  #prepareCel .overlay .modal-content .modal-header span h3 {
     font-size: 1.2rem;
   }
 }
-#prepareCel .overlay2 .modal-content2 .modal-header2 span p {
+#prepareCel .overlay .modal-content .modal-header span p {
   margin: 0;
   color: #00FF27;
   font-size: 1.3125rem;
 }
 @media (max-width: 768px) {
-  #prepareCel .overlay2 .modal-content2 .modal-header2 span p {
+  #prepareCel .overlay .modal-content .modal-header span p {
     font-size: 1rem;
   }
 }
-#prepareCel .overlay2 .modal-body2 {
+#prepareCel .overlay .modal-body {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -548,30 +563,26 @@ body {
   background-color: rgba(11, 50, 69, 0.8392156863);
 }
 @media (max-width: 768px) {
-  #prepareCel .overlay2 .modal-body2 {
+  #prepareCel .overlay .modal-body {
     width: 100%;
     height: auto;
     padding: 10px;
   }
 }
-#prepareCel .overlay2 .modal-body2 .single-input input {
-  width: 28.0625rem;
-  color: #fff;
-  outline: 0;
-  box-shadow: none;
-  border: 2px solid #00B21B;
-  background-color: #003127;
+#prepareCel .overlay .modal-body .steps h3 {
+  font-size: 2.125rem;
+  font-weight: 600;
 }
-@media (max-width: 768px) {
-  #prepareCel .overlay2 .modal-body2 .single-input input {
-    width: 100%;
-    font-size: 1rem;
-  }
+#prepareCel .overlay .modal-body .steps .description-steps {
+  padding: 10px;
+  border-radius: 0.3125rem;
+  border: 2px solid #003127;
+  background-color: rgba(0, 178, 27, 0.7725490196);
 }
-#prepareCel .overlay2 .modal-body2 .single-input input::placeholder {
-  color: rgba(255, 255, 255, 0.4980392157);
+#prepareCel .overlay .modal-body .confirm-steps label {
+  font-size: 1.25rem;
 }
-#prepareCel .overlay2 .btn-green2 {
+#prepareCel .overlay .btn-green {
   background-color: #00B21B;
   border: none;
   color: white;
@@ -580,10 +591,404 @@ body {
   font-size: 1.2rem;
 }
 @media (max-width: 768px) {
-  #prepareCel .overlay2 .btn-green2 {
+  #prepareCel .overlay .btn-green {
     font-size: 1rem;
     padding: 8px 15px;
   }
+}
+
+#configureWifi {
+  position: relative;
+}
+#configureWifi .overlay .modal-content {
+  display: flex;
+  align-items: center;
+  gap: 10px 0px;
+  width: 90rem;
+  height: 38rem;
+  background-image: url(/public/images/backgroundPageIot.png);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  transform: translate(-30%, 7%);
+}
+@media (max-width: 768px) {
+  #configureWifi .overlay .modal-content {
+    width: 90%;
+    height: auto;
+    padding: 15px;
+    transform: none;
+    position: relative;
+  }
+}
+#configureWifi .overlay .modal-content .modal-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 5.5625rem;
+  border-radius: 0.625rem;
+  background-color: rgba(11, 50, 69, 0.8392156863);
+}
+@media (max-width: 768px) {
+  #configureWifi .overlay .modal-content .modal-header {
+    height: auto;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+#configureWifi .overlay .modal-content .modal-header .btn {
+  margin: 0;
+  padding: 0;
+}
+#configureWifi .overlay .modal-content .modal-header .btn i {
+  color: #fff;
+  font-size: 2rem;
+}
+@media (max-width: 768px) {
+  #configureWifi .overlay .modal-content .modal-header .btn i {
+    font-size: 1.5rem;
+  }
+}
+#configureWifi .overlay .modal-content .modal-header .modal-title {
+  margin: 0;
+  padding: 0;
+  font-size: 3.25rem;
+}
+@media (max-width: 768px) {
+  #configureWifi .overlay .modal-content .modal-header .modal-title {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  #configureWifi .overlay .modal-content .modal-header span h3 {
+    font-size: 1.2rem;
+  }
+}
+#configureWifi .overlay .modal-content .modal-header span p {
+  margin: 0;
+  color: #00FF27;
+  font-size: 1.3125rem;
+}
+@media (max-width: 768px) {
+  #configureWifi .overlay .modal-content .modal-header span p {
+    font-size: 1rem;
+  }
+}
+#configureWifi .overlay .modal-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 67.1875rem;
+  height: 46.6875rem;
+  border-radius: 0.625rem;
+  background-color: rgba(11, 50, 69, 0.8392156863);
+}
+@media (max-width: 768px) {
+  #configureWifi .overlay .modal-body {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+}
+#configureWifi .overlay .modal-body .steps h3 {
+  font-size: 2.125rem;
+  font-weight: 600;
+}
+#configureWifi .overlay .modal-body .steps hr {
+  border: 1.5px solid;
+  color: #00B21B;
+}
+#configureWifi .overlay .modal-body .input-single {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 10px 0px;
+  height: 100%;
+}
+#configureWifi .overlay .modal-body .input-single #wifi {
+  width: 35.5625rem;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #00B21B;
+  background-color: transparent;
+}
+#configureWifi .overlay .modal-body .input-single #passwordWifi {
+  width: 35.5625rem;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #00B21B;
+  background-color: transparent;
+}
+#configureWifi .overlay .modal-body .input-single ::placeholder {
+  color: #fff;
+}
+#configureWifi .overlay .modal-body .confirm-steps label {
+  font-size: 1.25rem;
+}
+#configureWifi .overlay .btn-green {
+  background-color: #00B21B;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+@media (max-width: 768px) {
+  #configureWifi .overlay .btn-green {
+    font-size: 1rem;
+    padding: 8px 15px;
+  }
+}
+
+#finalizarIoT {
+  position: relative;
+}
+#finalizarIoT .overlay .modal-content {
+  display: flex;
+  align-items: center;
+  gap: 10px 0px;
+  width: 90rem;
+  height: 38rem;
+  background-image: url(/public/images/backgroundPageIot.png);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  transform: translate(-30%, 7%);
+}
+@media (max-width: 768px) {
+  #finalizarIoT .overlay .modal-content {
+    width: 90%;
+    height: auto;
+    padding: 15px;
+    transform: none;
+    position: relative;
+  }
+}
+#finalizarIoT .overlay .modal-content .modal-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 5.5625rem;
+  border-radius: 0.625rem;
+  background-color: rgba(11, 50, 69, 0.8392156863);
+}
+@media (max-width: 768px) {
+  #finalizarIoT .overlay .modal-content .modal-header {
+    height: auto;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+#finalizarIoT .overlay .modal-content .modal-header .btn {
+  margin: 0;
+  padding: 0;
+}
+#finalizarIoT .overlay .modal-content .modal-header .btn i {
+  color: #fff;
+  font-size: 2rem;
+}
+@media (max-width: 768px) {
+  #finalizarIoT .overlay .modal-content .modal-header .btn i {
+    font-size: 1.5rem;
+  }
+}
+#finalizarIoT .overlay .modal-content .modal-header .modal-title {
+  margin: 0;
+  padding: 0;
+  font-size: 3.25rem;
+}
+@media (max-width: 768px) {
+  #finalizarIoT .overlay .modal-content .modal-header .modal-title {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  #finalizarIoT .overlay .modal-content .modal-header span h3 {
+    font-size: 1.2rem;
+  }
+}
+#finalizarIoT .overlay .modal-content .modal-header span p {
+  margin: 0;
+  color: #00FF27;
+  font-size: 1.3125rem;
+}
+@media (max-width: 768px) {
+  #finalizarIoT .overlay .modal-content .modal-header span p {
+    font-size: 1rem;
+  }
+}
+#finalizarIoT .overlay .modal-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 67.1875rem;
+  height: 46.6875rem;
+  border-radius: 0.625rem;
+  background-color: rgba(11, 50, 69, 0.8392156863);
+}
+@media (max-width: 768px) {
+  #finalizarIoT .overlay .modal-body {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+}
+#finalizarIoT .overlay .modal-body .steps h3 {
+  font-size: 2.125rem;
+  font-weight: 600;
+}
+#finalizarIoT .overlay .modal-body .steps hr {
+  border: 1.5px solid;
+  color: #00B21B;
+}
+#finalizarIoT .overlay .modal-body .description-info-iot {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 10px 0px;
+}
+#finalizarIoT .overlay .modal-body .description-info-iot img {
+  width: 20rem;
+  height: 10rem;
+}
+#finalizarIoT .overlay .modal-body .description-info-iot .description-un {
+  display: flex;
+  width: 20.375rem;
+}
+#finalizarIoT .overlay .modal-body .description-info-iot .description-un p {
+  padding: 5px;
+  font-size: 1.1875rem;
+  border-top-left-radius: 0.3125rem;
+  border-bottom-left-radius: 0.3125rem;
+  background-color: #081623;
+  width: 100%;
+}
+#finalizarIoT .overlay .modal-body .description-info-iot .description-un #nameEspace {
+  padding: 5px;
+  font-size: 1.1875rem;
+  border: 1px solid #081623;
+  border-top-left-radius: 0rem;
+  border-bottom-left-radius: 0rem;
+  border-top-right-radius: 0.3125rem;
+  border-bottom-right-radius: 0.3125rem;
+  background-color: rgba(8, 22, 35, 0.4196078431);
+}
+#finalizarIoT .overlay .modal-body .description-info-iot .description-two {
+  display: flex;
+  width: 20.375rem;
+}
+#finalizarIoT .overlay .modal-body .description-info-iot .description-two p {
+  padding: 5px;
+  font-size: 1.1875rem;
+  border-top-left-radius: 0.3125rem;
+  border-bottom-left-radius: 0.3125rem;
+  background-color: #081623;
+  width: 100%;
+}
+#finalizarIoT .overlay .modal-body .description-info-iot .description-two #nameWifi {
+  padding: 5px;
+  font-size: 1.1875rem;
+  border: 1px solid #081623;
+  border-top-left-radius: 0rem;
+  border-bottom-left-radius: 0rem;
+  border-top-right-radius: 0.3125rem;
+  border-bottom-right-radius: 0.3125rem;
+  background-color: rgba(8, 22, 35, 0.4196078431);
+}
+#finalizarIoT .overlay .modal-body .confirm-steps label {
+  font-size: 1.25rem;
+}
+#finalizarIoT .overlay .btn-green {
+  background-color: #00B21B;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+@media (max-width: 768px) {
+  #finalizarIoT .overlay .btn-green {
+    font-size: 1rem;
+    padding: 8px 15px;
+  }
+}
+
+/* Container dos cards */
+#cardContainer {
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  display: flex;
+  gap: 20px;
+  justify-content: space-evenly;
+  /* Card básico */
+}
+#cardContainer .card-iot {
+  width: 19.1875rem;
+  height: 17rem;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+  background: #081623;
+  box-shadow: 0px 0px 16.3px rgba(255, 255, 255, 0.164);
+}
+#cardContainer .card-iot .card-header {
+  display: flex;
+  justify-content: space-between;
+}
+#cardContainer .card-iot .card-header p {
+  font-size: 1rem;
+}
+#cardContainer .card-iot .card-header .delete-btn {
+  background: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+}
+#cardContainer .card-iot img {
+  width: 100%;
+  height: auto;
+}
+#cardContainer .card-iot .card-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#cardContainer .card-iot .card-body .info-card {
+  display: flex;
+  flex-direction: column;
+}
+#cardContainer .card-iot .card-body .info-card h4 {
+  font-size: 1rem;
+  margin: 0;
+}
+#cardContainer .card-iot .card-body .info-card p {
+  font-size: 0.5625rem;
+  color: rgba(255, 255, 255, 0.1960784314);
+  margin: 0;
+  padding: 0;
+}
+#cardContainer .card-iot .card-body .btnOn {
+  width: 2.25rem;
+  height: 2.3125rem;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+}
+#cardContainer .card-iot .card-body .btnOn i {
+  padding: 5px;
+  font-size: 2rem;
+  border-radius: 50%;
+  background-color: #0B3245;
 }
 
 /*# sourceMappingURL=viewIots.css.map */

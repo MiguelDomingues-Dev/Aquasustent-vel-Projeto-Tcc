@@ -1,0 +1,73 @@
+@use './../settings/settings' as config;
+
+/* Container dos cards */
+#cardContainer {
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+    /* Card básico */
+    .card-iot {
+        width: 19.1875rem;
+        height: 17rem;
+        padding: 10px;
+        color: white;
+        border-radius: 10px;
+        background: config.$color2;
+        box-shadow: 0px 0px 16.3px rgba(255, 255, 255, 0.164);
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            p {
+                font-size: 1rem;
+            }
+            .delete-btn {
+                background: red;
+                color: white;
+                border: none;
+                cursor: pointer;
+                border-radius: 50%;
+                width: 25px;
+                height: 25px;
+            }
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+        .card-body {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .info-card {
+                display: flex;
+                flex-direction: column;
+                h4 {
+                    font-size: 1rem;
+                    margin: 0;
+                }
+                p {
+                    font-size: 0.5625rem;
+                    color: #ffffff32;
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+            .btnOn {
+                width: 2.25rem;
+                height: 2.3125rem;
+                border: none;
+                border-radius: 50%;
+                background-color: transparent;
+                i {
+                    padding: 5px;
+                    font-size: 2rem;
+                    border-radius: 50%;
+                    background-color: config.$color3;
+                }
+            }
+        }
+    }
+}
