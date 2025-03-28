@@ -16,44 +16,46 @@ body {
   justify-content: space-around;
   height: 100%;
 }
-.container #info {
-  margin-left: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-.container #info h1 {
-  font-size: 2.125rem;
-  color: #fff;
-  font-weight: 400;
-}
-.container #info h2 {
-  color: #fff;
-  font-size: 0.875rem;
-  font-weight: 300;
-}
-.container #info p {
-  color: #fff;
-  font-weight: 400;
-  width: 21.9375rem;
-}
-.container #info img {
-  width: 31.3125rem;
-  height: 27;
-}
 .container #formCadastro {
   width: 464px;
   height: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-evenly;
   margin-right: 20px;
 }
-.container #formCadastro h2 {
+.container #formCadastro .title-form {
+  display: flex;
+  align-items: center;
+  gap: 0px 10px;
+}
+.container #formCadastro .title-form h1 {
+  font-size: 2.125rem;
+  color: #fff;
+  font-weight: 400;
+}
+.container #formCadastro .title-form img {
+  width: 5rem;
+  height: 5rem;
+}
+.container #formCadastro .form-paragraph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container #formCadastro .form-paragraph h2 {
   align-self: center;
   color: #525252;
   font-size: 1.75rem;
   font-weight: 600;
+}
+.container #formCadastro .form-paragraph p {
+  color: #fff;
+  font-weight: 400;
+  width: 21.9375rem;
+  align-self: center;
 }
 .container #formCadastro .cadastrarWithGoogle {
   align-self: center;
