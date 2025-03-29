@@ -1,5 +1,5 @@
 document.querySelector("#btnLogin").addEventListener('click', function () {
-    window.location.href = "/public/auth/login.html"; // Remova "/pages/pages"
+    window.location.href = "/auth/login.html"; // Remova "/pages/pages"
 });
 
 document.querySelector(".btnCadastrar").addEventListener('click', function () {
@@ -7,5 +7,5 @@ document.querySelector(".btnCadastrar").addEventListener('click', function () {
 });
 
 document.querySelector("#btnCadastrar").addEventListener("click", function () {
-    window.location.href = "/public/auth/cadastro.html";
+    window.location.href = "/auth/cadastro.html";
 });
