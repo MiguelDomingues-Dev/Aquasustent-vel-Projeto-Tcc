@@ -14,6 +14,7 @@ body {
 
 .sidebar {
   width: 80px;
+  height: 97%;
   background-color: #081623;
   display: flex;
   flex-direction: column;
@@ -131,8 +132,8 @@ body {
   grid-template-areas: "sidebar navbar navbar tanque" "sidebar card card tanque" "sidebar historico climaTempo tanque";
   grid-template-columns: 5% 3fr 1fr;
   grid-template-rows: auto auto 1fr;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 97%;
   padding: 0px !important;
 }
 .dadContainer .sidebar {
@@ -233,6 +234,7 @@ body {
   }
 }
 .card-container {
+  width: 96%;
   padding: 20px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -388,12 +390,38 @@ body {
   color: #66a678;
 }
 
+.construcaoContainer {
+  position: absolute;
+  width: 18.75rem;
+  height: 26.25rem;
+  left: 52.5%;
+  top: 50%;
+}
+.construcaoContainer .header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.construcaoContainer .header i {
+  font-size: 4rem;
+}
+.construcaoContainer .header h3 {
+  color: wheat;
+  font-size: 1.5rem;
+}
+.construcaoContainer .componenteConstrucao {
+  color: rgb(9, 255, 79);
+  z-index: 5;
+}
+
 .weather-card {
   width: 18.75rem;
   height: 26.25rem;
   border-radius: 15px;
   background: #0B3245;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  filter: blur(5px);
+  z-index: -5;
 }
 .weather-card .backgroundImg {
   width: 100%;

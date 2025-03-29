@@ -1,3 +1,0 @@
-{
-    "routes": [{ "public": "/(.*)", "dest": "/index.html" }]
-}  
