@@ -80,5 +80,36 @@
         </section>
     </div>
     <script src="../js/validatePassword.js"></script>
-</body>
+    <script>
+        document.getElementById("registerForm").addEventListener("submit", async (e) => {
+            e.preventDefault();
+        
+            const usuario = document.getElementById("user").value;
+            const displayName = document.getElementById("nome").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+        
+            try {
+                const response = await fetch("/api/register", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ usuario, displayName, email, password }),
+            });
+        
+            const data = await response.json();
+        
+            if (data.success) {
+                document.getElementById("registerResponse").innerText = "Usuário cadastrado com sucesso!";
+                console.log(data.user);
+            } else {
+                document.getElementById("registerResponse").innerText = `Erro: ${data.error}`;
+            }
+            } catch (error) {
+                document.getElementById("registerResponse").innerText = "Erro na requisição.";
+                console.error(error);
+            }
+        });
+        </script>
 </html>
